@@ -10,7 +10,7 @@
  *
  * @package SilverStripe\CheckboxGroupField
  * @author Nic Horstmeier <nhorstmeier@dynamicagency.com>
- * @copyright 2018 Dynamic
+ * @copyright 2018 SilverStripe
  * @license https://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  * @link https://github.com/silverstripe/silverstripe-checkboxgroupfield
  */
