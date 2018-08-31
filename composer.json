@@ -1,0 +1,39 @@
+{
+  "name": "silverstripe/checkboxgroupfield",
+  "type": "silverstripe-vendormodule",
+  "description": "A group field providing a combination Text and Checkbox field to show/hide text.",
+  "homepage": "https://github.com/silverstripe/silverstripe-checkboxgroupfield",
+  "keywords": ["silverstripe","form","field","text","checkbox"],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Nic Horstmeier",
+      "role": "Developer",
+      "email": "nhorstmeier@dynamicagency.com",
+      "homepage": "http://dynamicagency.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "silverstripe/framework": "^4@dev"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.7",
+  },
+  "autoload": {
+    "psr-4": {
+      "SilverStripe\\CheckboxGroupField\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    },
+    "expose": [
+      "admin/client/dist",
+      "client/dist"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

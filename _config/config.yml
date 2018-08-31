@@ -1,0 +1,11 @@
+---
+Name: checkbox-group-field
+---
+
+# Configure Admin Extensions:
+
+SilverStripe\Admin\LeftAndMain:
+  extra_requirements_css:
+    - "silverstripe/checkboxgroupfield: admin/client/dist/styles/bundle.css"
+  extra_requirements_javascript:
+    - "silverstripe/checkboxgroupfield: admin/client/dist/js/bundle.js"
