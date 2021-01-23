@@ -3,4 +3,8 @@
 
 // Import Variables:
 
-@import "variables";
+//@import "variables";
+.checkboxgroup .input-group-append .form-check-input {
+  margin-left: 0;
+  position: relative;
+}

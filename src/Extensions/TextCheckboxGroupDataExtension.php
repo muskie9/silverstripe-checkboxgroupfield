@@ -2,7 +2,7 @@
 
 namespace SilverStripe\CheckboxGroupField\Extensions;
 
-use DNADesign\TextCheckboxGroup\Forms\TextCheckboxGroupField;
+use SilverStripe\CheckboxGroupField\Forms\CheckboxGroupField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\Tab;
@@ -12,10 +12,10 @@ use SilverStripe\ORM\DataExtension;
 use SilverStripe\ORM\ValidationResult;
 
 /**
- * Class CheckboxGroupDataExtension
+ * Class TextCheckboxGroupDataExtension
  * @package SilverStripe\CheckboxGroupField\Extensions
  */
-class CheckboxGroupDataExtension extends DataExtension
+class TextCheckboxGroupDataExtension extends DataExtension
 {
     /**
      * @var array
@@ -30,7 +30,7 @@ class CheckboxGroupDataExtension extends DataExtension
      */
     public function updateCMSFields(FieldList $fields)
     {
-        $field = TextCheckboxGroupField::create(
+        $field = CheckboxGroupField::create(
             TextField::create('Title', _t("{$this->owner->ClassName}.TitleLabel", 'Title (displayed if checked)')),
             CheckboxField::create('ShowTitle', _t("{$this->owner->ClassName}.ShowTitleLabel", 'Displayed'))
         )->setName('TitleAndDisplayed');

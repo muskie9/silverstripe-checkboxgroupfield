@@ -1,62 +1,67 @@
 {
-  "name": "silverstripe-checkbox-group-field",
+  "name": "silverstripe-checkboxgroupfield",
   "version": "1.0.0",
-  "description": "A group field providing a combination Text and Checkbox field to show/hide text.",
-  "homepage": "https://github.com/silverstripe/silverstripe-checkboxgroupfield",
-  "keywords": ["silverstripe","form","field","text","checkbox"],
-  "license": "BSD-3-Clause",
-  "author": "Dynamic",
-  "contributors": [
-    {
-      "name": "Nic Horstmeier",
-      "email": "nhorstmeier@dynamicagency.com",
-      "url": "http://dynamicagency.com"
-    }
-  ],
+  "description": "A Text and Checkbox field for easily showing/hiding a Title",
+  "scripts": {
+    "build": "NODE_ENV=production webpack -p --bail --progress",
+    "dev": "NODE_ENV=development webpack --progress",
+    "watch": "NODE_ENV=development webpack --watch --progress",
+    "css": "WEBPACK_CHILD=css npm run build",
+    "lock": "npm-shrinkwrap --dev",
+    "lint": "eslint client/src && sass-lint --verbose client/src/**/*.scss",
+    "lint-js": "eslint client/src",
+    "lint-js-fix": "eslint client/src --fix",
+    "lint-sass": "sass-lint --verbose client/src/**/*.scss"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/silverstripe/silverstripe-checkboxgroupfield.git"
+    "url": "git+https://github.com/silverstripe/silverstripe-checkboxgroupfield.git"
   },
+  "keywords": [
+    "silverstripe",
+    "checkbox field",
+    "group field"
+  ],
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/silverstripe/silverstripe-checkboxgroupfield/issues"
   },
-  "engines": {
-    "node": ">= 6.x"
+  "homepage": "https://github.com/silverstripe/silverstripe-checkboxgroupfield#readme",
+  "dependencies": {
+    "apollo-client": "^2.3.1",
+    "bootstrap": "^4.3.1",
+    "classnames": "^2.2.5",
+    "graphql": "^14.0.0",
+    "graphql-tag": "^2.10.0",
+    "jquery": "^3.5.0",
+    "popper.js": "^1.14.7",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.1",
+    "react-apollo": "^2.1.0",
+    "react-dnd": "^5.0.0",
+    "react-dnd-html5-backend": "^5.0.1",
+    "react-dom": "^16.6.1",
+    "react-redux": "^5.0.7",
+    "reactstrap": "^6.4.0",
+    "redux": "^4.0.0",
+    "redux-form": "^6.8.0"
   },
-  "scripts": {
-    "watch": "webpack --env.development --colors --watch",
-    "build": "webpack --env.production --colors --optimize-minimize"
-  },
-  "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^7.1.6",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "clean-webpack-plugin": "^0.1.17",
-    "copy-webpack-plugin": "^4.2.0",
-    "css-loader": "^0.28.7",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.5",
-    "node-sass": "^4.5.3",
-    "postcss-loader": "^2.0.8",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.19.0",
-    "url-loader": "^0.6.2",
-    "webpack": "^3.8.1"
+    "@silverstripe/eslint-config": "^0.0.5",
+    "@silverstripe/webpack-config": "^1.5.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0"
   },
   "babel": {
     "presets": [
-      [
-        "env",
-        {
-          "modules": false
-        }
-      ]
+      "env",
+      "react"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
     ]
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+  "engines": {
+    "node": "^10.x"
+  }
 }
